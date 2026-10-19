@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak | Tugas 4</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header><h1>Rahman Maulana</h1><p>Belajar, Berkarya, dan Terus Berkembang</p></header>
+  <nav aria-label="Navigasi utama">
+    <a href="latihan1.html">Kembali ke beranda</a>
+  </nav>
+  <main>
+    <section class="card">
+  <h2>Kontak Saya</h2>
+  <p>Silakan hubungi saya melalui informasi kontak yang kamu isi sendiri di bawah ini.</p>
+  <form id="contactForm">
+    <label for="nama">Nama</label><input id="nama" name="nama" required placeholder="Masukkan nama kamu">
+    <label for="email">Email</label><input id="email" name="email" type="email" required placeholder="nama@email.com">
+    <label for="pesan">Pesan</label><textarea id="pesan" name="pesan" required placeholder="Tulis pesan..."></textarea>
+    <button class="button" type="submit">Kirim Pesan</button>
+  </form>
+  <p id="info" aria-live="polite"></p>
+  <p><em>Catatan: formulir ini hanya contoh tampilan front-end dan belum mengirim pesan ke server.</em></p>
+</section>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('info').textContent = 'Terima kasih! Formulir contoh berhasil diuji, tetapi pesan belum dikirim ke email.';
+  this.reset();
+});
+</script>
+  </main>
+  <footer>&copy; Rahman 2026 | Dibuat untuk tugas latihan HTML</footer>
+</body>
+</html>
